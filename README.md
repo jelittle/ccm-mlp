@@ -195,42 +195,20 @@ MACs and runtime. That is the reference to compare against, and it needs no down
 
 ## Multi-illuminant LSMI
 
-Our multi-illuminant handling of the
-[LSMI dataset](https://github.com/DY112/LSMI-dataset) is part of this paper's
-contribution. It needs more setup than the lightbox path: the upstream LSMI
-preprocessing has to be run first, and a reference DNG is required for camera
-metadata.
+We use the
+[LSMI dataset](https://github.com/DY112/LSMI-dataset) to implement our multi illuminant method, as such it requires a seperate processing pathway
 
-Run the **upstream** LSMI preprocessing first (`0_cvt2tiff.py`, then
-`1_make_mixture_map.py`, then `2_preprocess_data.py`); we do not redistribute it.
-Our processor consumes its output rather than the raw captures directly, expecting
-each scene as `<camera>/<Place>/` holding `<Place>_{1,2,12}.tiff`, the `<Place>_12.npy`
-mixture map and the original raw, plus a `meta.json` at the camera root.
-
-**It also needs a reference DNG** at
-`${data_root}/LSMI/converted_dngs/<camera>_converted.dng`. TIFFs carry no camera
-metadata, so the pipeline borrows colour matrices and black/white levels from a DNG
-of the same camera. These ship with the dataset download; without one, processing
-fails immediately with a `FileNotFoundError`.
+Follow the LSMI preprocessing steps first (`0_cvt2tiff.py`, then
+`1_make_mixture_map.py`, then `2_preprocess_data.py`), these are not in the code.
 
 Then:
 
 ```bash
 python data_processing/lsmi/patch_processing.py sony    # -> patches/ rawnormalized/ raw/ mixed/
-python data_processing/lsmi/crop_rawnormalized.py sony  # -> cropped/ (256x256)
+python data_processing/lsmi/crop_rawnormalized.py sony  
 
 python training/build_jobs.py lsmi                      # configs/lsmi_cameras/ x models
 ```
-
-**`mixed/` is the multi-illuminant set** — the contribution — read by the `mixed`
-split in `utilities/dataset.py` via each camera config's `mixed_path`.
-
-`mixed` records are ~330 MB each, so a full camera needs a lot of disk. Pass
-`--limit N` to `patch_processing.py` to process only the first N scenes while you
-are checking the setup.
-
-Note we resize to 256x256 and renormalise by camera bit depth (galaxy by 1023,
-nikon/sony by 16383), which matters if you compare our LSMI numbers with theirs.
 
 ---
 
