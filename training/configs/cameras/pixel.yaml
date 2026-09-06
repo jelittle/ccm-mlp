@@ -1,0 +1,28 @@
+data:
+  type: "lightbox"  
+  camera_name: "Pixel"
+  corner1: [0.2760, 0.3540]
+  corner2: [0.6579, 0.6903]
+  split: "dirchletplushoang"
+  chart_type: 24  # 24 or 140
+  src_path: "${raw_data_root}/lightbox/Pixel" #Original unprocessed images
+  processed_path: "${data_root}/LightboxCaptures/colorchecker24/Pixel" #Processed images
+  wild_path: "${raw_data_root}/InTheWild/pixel" #For wild images
+  target_24: "${repo_root}/assets/colorchecker/xyzd50_colorchecker24.npy"
+  batch_size: 64
+  min_clip: !!bool False
+  max_wp: [3.5490, 7.9192]
+  max_xy: [1.7351, 0.8030]
+
+
+sim_data:
+  src_path: "${sim_root}/pixel_simulated.npy"
+  #src_path: "${sim_root}/camspecs_onlyhoang/pixel_simulated.npy" #test with only hoang's sims
+  target_path: "${sim_root}/xyz_simulated.npy"
+  processed_path_for_temps: "${data_root}/LightboxCaptures/colorchecker24/Pixel"
+  chart_type: 24  # 24 or 140
+  target_24: "${repo_root}/assets/colorchecker/xyzd50_colorchecker24.npy"
+  batch_size: 64
+  max_wp: [3.5490, 7.9192]
+  max_xy: [1.7351, 0.8030]
+

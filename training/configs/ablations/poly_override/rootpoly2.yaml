@@ -1,0 +1,8 @@
+matrix:
+  lr: 0.001
+  num_gpus: 1
+  output_dim: 18
+  neurons: 32
+  layers: 1
+  encoding: "id"
+  matrix_type: "rootpolynomial2"

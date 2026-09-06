@@ -1,0 +1,11 @@
+model:
+  type: "NN1DCCT" #options: bestfitsolver, mlp, 2cst , 3cst, 2DNNWP(WIP), 2DNNXY(WIP)
+  epochs: 3000
+  lr: 0.001
+  num_gpus: 1
+  output_dim: 9
+  input_dim: 2
+
+
+
+

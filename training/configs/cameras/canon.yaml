@@ -1,0 +1,26 @@
+data:
+  type: "lightbox"  
+  camera_name: "Canon"
+  corner1: [0.0923, 0.1597]
+  corner2: [0.8969, 0.9456]
+  split: "dirchletplushoang"
+  chart_type: 24  # 24 or 140
+  src_path: "${raw_data_root}/lightbox/Canon" #Original unprocessed images
+  processed_path: "${data_root}/LightboxCaptures/colorchecker24/Canon" #Processed images
+  wild_path: "${data_root}/LightboxCaptures/colorchecker24/Canon" #For wild images
+  target_24: "${repo_root}/assets/colorchecker/xyzd50_colorchecker24.npy"
+  batch_size: 64
+  min_clip: !!bool False
+  max_wp: [4.8215, 5.8364]
+  max_xy: [0.7787, 0.7421]
+
+sim_data:
+  src_path: "${sim_root}/canon_simulated.npy"
+  target_path: "${sim_root}/xyz_simulated.npy"
+  processed_path_for_temps: "${data_root}/LightboxCaptures/colorchecker24/Canon"
+  chart_type: 24  # 24 or 140
+  target_24: "${repo_root}/assets/colorchecker/xyzd50_colorchecker24.npy"
+  batch_size: 64
+  max_wp: [4.8215, 5.8364]
+  max_xy: [0.7787, 0.7421]
+

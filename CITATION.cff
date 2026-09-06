@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the accompanying paper."
+title: "Off the Planckian Locus: Using 2D Chromaticity to Improve In-Camera Color"
+authors:
+  - family-names: "Tedla"
+    given-names: "SaiKiran"
+  - family-names: "Little"
+    given-names: "Joshua E."
+  - family-names: "Karaimer"
+    given-names: "Hakki Can"
+  - family-names: "Brown"
+    given-names: "Michael S."
+preferred-citation:
+  type: conference-paper
+  title: "Off the Planckian Locus: Using 2D Chromaticity to Improve In-Camera Color"
+  authors:
+    - family-names: "Tedla"
+      given-names: "SaiKiran"
+    - family-names: "Little"
+      given-names: "Joshua E."
+    - family-names: "Karaimer"
+      given-names: "Hakki Can"
+    - family-names: "Brown"
+      given-names: "Michael S."
+  collection-title: "European Conference on Computer Vision (ECCV)"
+  year: 2026
+identifiers:
+  - type: other
+    value: "arXiv:2511.17133"
+    description: "arXiv preprint"
+url: "https://ccmmlp.github.io/"
+contact:
+  - email: "jelittle@yorku.ca"
+    family-names: "Little"
+    given-names: "Joshua E."
+version: "1.0.0"
+license: MIT
+year: 2026

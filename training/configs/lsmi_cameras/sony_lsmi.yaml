@@ -1,0 +1,33 @@
+# data:
+#   type: "LSMI"  #changed but unconfirmed
+#   camera_name: "Sony"
+#   split: "sony" #todo: change this
+#   chart_type: 24  # 24
+#   # src_path: "${raw_data_root}/LightboxCaptures/colorchecker24/Canon" #Original unprocessed images
+#   processed_path: "${data_root}/LSMI_dataset/sony" #Processed images
+#   wild_path: "${data_root}/LSMI_dataset/sony" #For wild images
+#   mixed_path: "${data_root}/LSMI_dataset/sony" #For mixed images
+#   target_24: "${repo_root}/assets/colorchecker/xyzd50_colorchecker24.npy"
+#   batch_size: 64 #stays
+#   min_clip: !!bool False
+#   max_wp: [2.1454, 0.9767] 
+#   max_xy: [0.4279, 0.4949] 
+#   downscale_full: 4  
+
+
+data:
+  type: "LSMI"  #changed but unconfirmed
+  camera_name: "Sony"
+  split: "sony" #todo: change this
+  chart_type: 24  # 24
+  # src_path: "${raw_data_root}/LightboxCaptures/colorchecker24/Canon" #Original unprocessed images
+  processed_path: "${data_root}/LSMI/colorchecker24/sony" #Processed images
+  wild_path: "${data_root}/LSMI/colorchecker24/sony" #For wild images
+  mixed_path: "${data_root}/LSMI/colorchecker24/sony" #For mixed images
+  target_24: "${repo_root}/assets/colorchecker/xyzd50_colorchecker24.npy"
+  batch_size: 64 #stays
+  min_clip: !!bool False
+  max_wp: [2.1454, 0.9767] 
+  max_xy: [0.4279, 0.4949] 
+  downscale_full: 4  
+

@@ -1,0 +1,11 @@
+# Normalise to LF in the repository. Without this, committing from Windows stores
+# CRLF, and a Linux user cloning gets shell scripts that fail with
+# "bad interpreter: /usr/bin/env bash^M".
+* text=auto eol=lf
+
+# Binary: never touch line endings.
+*.npy   binary
+*.pt    binary
+*.dng   binary
+*.mat   binary
+*.lss   binary

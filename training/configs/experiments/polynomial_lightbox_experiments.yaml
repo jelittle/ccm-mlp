@@ -1,0 +1,5 @@
+save_path: "${output_root}/polynomial_lightbox"
+append_date: False
+train: False
+wild_only: True
+skip_mixed_and_wild: false 

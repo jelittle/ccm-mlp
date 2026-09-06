@@ -1,0 +1,3 @@
+save_path: "${output_root}/ablation_lightbox"
+append_date: False
+train: True

@@ -1,0 +1,32 @@
+# Runtime dependencies for the CST calibration codebase.
+#
+# These are lower bounds, not the exact environment the paper was run in.
+# For an exact reproduction of the paper's runs (Python 3.9, CUDA 12.4) use
+# setup/environment.yml instead.
+#
+# tinycudann is deliberately NOT listed: it is a CUDA source build, not a pip
+# package. The code runs without it via the pure-PyTorch network path, which is
+# the default. See setup/install_tinycudann.sh if you want the fused kernels.
+
+numpy>=1.23
+scipy>=1.9
+torch>=2.0
+torchinfo>=1.8
+
+# colour science / raw image handling
+colour-science>=0.4.4
+colour-demosaicing>=0.2.5
+rawpy>=0.18
+opencv-python>=4.6
+ExifRead>=3.0
+
+# data wrangling and plotting
+pandas>=1.5
+matplotlib>=3.6
+tqdm>=4.64
+PyYAML>=6.0
+einops>=0.6
+
+# Optional extras (install with: pip install -e ".[wandb,metrics]")
+#   wandb>=0.15        experiment tracking; training runs offline without it
+#   ptflops>=0.7       FLOP/parameter counts for the MACs and model-size columns

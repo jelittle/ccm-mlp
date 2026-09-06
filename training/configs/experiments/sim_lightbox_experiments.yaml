@@ -1,0 +1,5 @@
+save_path: "${output_root}/sim_lightbox"
+append_date: False
+train: True
+wild_only: True
+use_sim_at_train: True

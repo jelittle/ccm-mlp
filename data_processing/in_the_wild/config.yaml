@@ -1,0 +1,5 @@
+# preprocess_folder: "${raw_data_root}/InTheWild/samsung_labeled_sai"
+# prepped_dst: "${raw_data_root}/InTheWild/samsung"
+
+preprocess_folder: "${raw_data_root}/InTheWild/samsung_baseline" #just edited direclty so this is not used
+prepped_dst: "${raw_data_root}/InTheWild/samsung"

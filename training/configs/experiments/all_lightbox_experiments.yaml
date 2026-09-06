@@ -1,0 +1,5 @@
+save_path: "${output_root}/lightbox"
+append_date: False
+train: True
+wild_only: False
+skip_mixed_and_wild: True

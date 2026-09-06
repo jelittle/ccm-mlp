@@ -1,0 +1,7 @@
+model:
+  type: "7cst"
+  epochs: 1
+  lr: 0.001
+  num_gpus: 1
+  output_dim: 9
+  input_dim: 1

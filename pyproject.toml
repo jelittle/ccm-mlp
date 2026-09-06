@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colour-correction-cst"
+version = "1.0.0"
+description = "Learned colour space transform (CST) calibration conditioned on illuminant whitepoint"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+
+# Pins are lower bounds, not the exact pip freeze of the authors' machine.
+# The paper's runs used Python 3.9 with CUDA 12.4; see setup/environment.yml to
+# reproduce that environment exactly.
+dependencies = [
+    "numpy>=1.23",
+    "scipy>=1.9",
+    "torch>=2.0",
+    "torchinfo>=1.8",
+    "colour-science>=0.4.4",
+    "colour-demosaicing>=0.2.5",
+    "rawpy>=0.18",
+    "opencv-python>=4.6",
+    "ExifRead>=3.0",
+    "pandas>=1.5",
+    "matplotlib>=3.6",
+    "tqdm>=4.64",
+    "PyYAML>=6.0",
+    "einops>=0.6",
+]
+
+[project.optional-dependencies]
+# Experiment tracking. Entirely optional -- training runs offline without it.
+wandb = ["wandb>=0.15"]
+# FLOP/parameter counting for the MACs and model-size columns.
+metrics = ["ptflops>=0.7"]
+
+[tool.setuptools]
+# 'utilities' is deliberately exposed as a TOP-LEVEL package rather than
+# 'training.utilities'. Published checkpoints are loaded by name, and scripts
+# across data_processing/ and extra/ import it directly.
+package-dir = { utilities = "training/utilities", camera_pipeline = "third_party/camera_pipeline" }
+
+[tool.setuptools.packages.find]
+where = ["training", "third_party"]
+include = ["utilities*", "camera_pipeline*"]

@@ -1,0 +1,26 @@
+data:
+  type: "lightbox"  
+  camera_name: "Sony"
+  corner1: [0.131, 0.160]
+  corner2: [0.893, 0.899]
+  split: "dirchletplushoang"
+  chart_type: 24  # 24 or 140
+  src_path: "${raw_data_root}/lightbox/Sony" #Original unprocessed images
+  processed_path: "${data_root}/LightboxCaptures/colorchecker24/Sony" #Processed images
+  target_24: "${repo_root}/assets/colorchecker/xyzd50_colorchecker24.npy"
+  batch_size: 64
+  min_clip: !!bool False
+  max_wp: [5.3781, 4.7253]
+  max_xy: [0.6661, 0.7229]
+
+
+sim_data:
+  src_path: "${sim_root}/sony_simulated.npy"
+  target_path: "${sim_root}/xyz_simulated.npy"
+  processed_path_for_temps: "${data_root}/LightboxCaptures/colorchecker24/Sony"
+  chart_type: 24  # 24 or 140
+  target_24: "${repo_root}/assets/colorchecker/xyzd50_colorchecker24.npy"
+  batch_size: 64
+  max_wp: [5.3781, 4.7253]
+  max_xy: [0.6661, 0.7229]
+

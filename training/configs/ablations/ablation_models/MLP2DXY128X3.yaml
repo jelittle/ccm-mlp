@@ -1,0 +1,12 @@
+model:
+  
+  
+  type: "MLP2DXY" #options: bestfitsolver, mlp, 2cst , 3cst, 2DNNWP(WIP), 2DNNXY(WIP)
+  epochs: 8000
+  lr: 0.001
+  num_gpus: 1
+  input_dim: 2
+  output_dim: 9
+  neurons: 128
+  layers: 3
+  encoding: "id"

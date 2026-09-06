@@ -1,0 +1,15 @@
+model:
+  
+  
+  type: "EXPINV1DCCT" #options: bestfitsolver, mlp, 2cst , 3cst, 2DNNWP(WIP), 2DNNXY(WIP)
+  title: "test"
+  epochs: 4
+  lr: 0.001
+  num_gpus: 1
+  input_dim: 4
+  output_dim: 3
+  neurons: 128
+  layers: 2
+  encoding: "id"
+
+

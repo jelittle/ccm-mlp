@@ -1,0 +1,45 @@
+# Data and results -- everything here is downloaded or regenerated, never committed.
+data/
+project_data/
+outputs/
+assets/simulated/
+*.npy
+!assets/colorchecker/*.npy
+!assets/lss/*.npy
+!data_processing/**/corners.npy
+!data_processing/**/illumination_blending_weights.npy
+
+# Model weights: only the small released checkpoints under checkpoints/ belong in git.
+*.pth
+*.ckpt
+
+# Experiment tracking
+wandb/
+*.log
+
+# Rendered figure output
+*.pdf
+*.mp4
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Environment / editor
+.env
+.vscode/
+.DS_Store
+
+# Internal release gates -- kept locally, not published.
+# test_no_leaks.py enumerates every private path, hostname, account and key that
+# was scrubbed from this tree; committing it would advertise exactly what was
+# removed. The CI workflow only runs these, so it goes too.
+tests/
+.github/

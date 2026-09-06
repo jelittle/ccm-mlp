@@ -1,0 +1,4 @@
+save_path: "${output_root}/precon_ablation_lightbox"
+append_date: False
+train: True
+wild_only: False

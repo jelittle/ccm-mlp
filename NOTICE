@@ -1,0 +1,19 @@
+This product includes third-party software.
+
+--------------------------------------------------------------------------------
+third_party/camera_pipeline/
+--------------------------------------------------------------------------------
+Derived from "Simple Camera Pipeline"
+    https://github.com/AbdoKamel/simple-camera-pipeline
+    Copyright (c) 2019 Abdelrahman Abdelhamed
+    Licensed under the MIT License (see third_party/camera_pipeline/LICENSE).
+
+MODIFICATIONS: pipeline.py and pipeline_utils.py have been modified from the
+upstream versions for this project. The demo scripts (demo1.py, demo2.py,
+demo_multi_demosaic.py) were removed as they are not used here.
+
+--------------------------------------------------------------------------------
+Datasets
+--------------------------------------------------------------------------------
+No dataset is redistributed in this repository. The lightbox and in-the-wild
+captures are distributed separately; see the download link in README.md.

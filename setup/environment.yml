@@ -1,0 +1,28 @@
+
+name: cst
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pytorch>=2.0
+  - pytorch-cuda=12.4
+  - numpy>=1.23
+  - scipy>=1.9
+  - pandas>=1.5
+  - matplotlib>=3.6
+  - pyyaml>=6.0
+  - tqdm>=4.64
+  - opencv>=4.6
+  - pip
+  - pip:
+      - colour-science>=0.4.4
+      - colour-demosaicing>=0.2.5
+      - rawpy>=0.18
+      - ExifRead>=3.0
+      - torchinfo>=1.8
+      - einops>=0.6
+      # optional extras
+      - wandb>=0.15
+      - ptflops>=0.7

@@ -1,0 +1,8 @@
+model:
+  type: "RBF2DXY"
+  interp_method: "linear_rbf"
+  epochs: 1
+  lr: 0.001
+  num_gpus: 1
+  output_dim: 9
+  input_dim: 2

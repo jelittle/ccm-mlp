@@ -1,0 +1,25 @@
+data:
+  type: "lightbox"  
+  camera_name: "Samsung"
+  corner1: [0.3250, 0.3450]
+  corner2: [0.6786, 0.6616]
+  split: "dirchletplushoang"
+  chart_type: 24  # 24 or 140
+  src_path: "${raw_data_root}/lightbox/Samsung" #Original unprocessed images
+  processed_path: "${data_root}/LightboxCaptures/colorchecker24/Samsung" #Processed images
+  wild_path: "${raw_data_root}/InTheWild/samsung" #For wild images
+  target_24: "${repo_root}/assets/colorchecker/xyzd50_colorchecker24.npy"
+  batch_size: 64
+  min_clip: !!bool False
+  max_wp: [4.7167, 7.3727]
+  max_xy: [2.5839, 0.7495]
+
+sim_data:
+  src_path: "${sim_root}/samsung_simulated.npy"
+  target_path: "${sim_root}/xyz_simulated.npy"
+  processed_path_for_temps: "${data_root}/LightboxCaptures/colorchecker24/Samsung"
+  chart_type: 24  # 24 or 140
+  target_24: "${repo_root}/assets/colorchecker/xyzd50_colorchecker24.npy"
+  batch_size: 64
+  max_wp: [4.7167, 7.3727]
+  max_xy: [2.5839, 0.7495]

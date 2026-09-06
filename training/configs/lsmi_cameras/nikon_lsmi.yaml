@@ -1,0 +1,15 @@
+data:
+  type: "LSMI"  #changed but unconfirmed
+  camera_name: "Nikon"
+  split: "nikon" #todo:change this
+  chart_type: 24  # 24
+  # src_path: "${raw_data_root}/LightboxCaptures/colorchecker24/Nikon" #Original unprocessed images
+  processed_path: "${data_root}/LSMI/colorchecker24/nikon" #Processed images
+  wild_path: "${data_root}/LSMI/colorchecker24/nikon" #For wild images
+  mixed_path: "${data_root}/LSMI/colorchecker24/nikon" #For mixed images
+  target_24: "${repo_root}/assets/colorchecker/xyzd50_colorchecker24.npy"
+  batch_size: 64 #stays
+  min_clip: !!bool False
+  max_wp: [ 4.57546392,  1.79411644]
+  max_xy: [ 0.47314955, 0.47263048]
+  downscale_full: 4  

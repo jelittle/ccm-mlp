@@ -1,0 +1,12 @@
+model: 
+  type: "LUT" 
+  epochs: 1 #Dummy should not be used
+  lr: 0 
+  model_distill: 
+      type: "MLP2DXY" #options: bestfitsolver, mlp, 2cst , 3cst, 2DNNWP(WIP), 2DNNXY(WIP)
+      input_dim: 2
+      output_dim: 9
+      neurons: 32
+      layers: 1
+      encoding: "id"
+  lut_width: 10
