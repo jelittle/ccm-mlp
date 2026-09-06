@@ -262,8 +262,7 @@ The coordinate suffixes map to the paper's input-coordinate ablation (Tables 2, 
 
 ## Contact
 
-Questions and issues: [jelittle@yorku.ca](mailto:jelittle@yorku.ca), or via the
-[project page](https://ccmmlp.github.io/).
+Questions and issues: [jelittle@yorku.ca](mailto:jelittle@yorku.ca).
 
 ---
 
