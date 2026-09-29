@@ -79,7 +79,7 @@ OffthePlanckianLocus/
 └── camera_spectral_sensitivites/   # <camera>.txt spectral response curves
 ```
 
-### Telling the code where your data lives
+### path configs
 
 All paths route through **`training/configs/paths.yaml`**. Edit that file once, or
 override per-run with environment variables:
@@ -97,8 +97,7 @@ export CC_DATA_ROOT=/path/to/where/processed/output/should/go
 | `sim_root` | spectrally simulated training data |
 | `output_root` | checkpoints, per-image `.npy` dumps, metrics CSVs |
 
-### Skip processing, or do it yourself
-
+### data processing
 The download includes a `processed/` folder with the patches and splits already
 extracted. To use them and go straight to training:
 
